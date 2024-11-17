@@ -2,13 +2,13 @@
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
-    <form method="POST" action="{{ route('login') }}">
+    <form class="forms-sample" method="POST" action="{{ route('login') }}">
         @csrf
 
         <!-- Email Address -->
         <div>
             <x-input-label for="login" :value="__('Email/Phone')" />
-            <x-text-input id="login" class="block mt-1 w-full" type="text" name="login" : required autofocus autocomplete="username" />
+            <x-text-input id="login" class="block mt-1 w-full" type="text" name="login" : required autofocus autocomplete="login" />
         </div>
 
         <!-- Password -->
